@@ -1,30 +1,52 @@
-# React  + Vite
+A React-based GitHub commit difference viewer built with Vite. This project allows users to view commit details, author information, and file changes in a structured and interactive format.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Requirements
+- npm (Node JS) 
+- Refer https://docs.npmjs.com/downloading-and-installing-node-js-and-npm for installation
+## Features
 
-Currently, two official plugins are available:
+- Fetches and displays commit details including author, date, message, and parent commit.
+- Shows file-level diffs with expandable sections for individual file changes.
+- Highlights added (+) and removed (-) lines in the diff viewer.
+- Uses environment variables for API configuration.
+- Built with Vite for fast development and optimized builds.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+Clone the Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+```bash 
+git clone https://github.com/lavan-fs/git-difference-fe
+cd git-difference-fe
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Install Dependencies
+```bash
+npm install
+```
+## Set Up Environment Variables
+Create a .env file in the root directory and add the following:
+```
+VITE_BE_URL=http://your-backend-api-url
+```
+
+
+Run the Development Server
+
+    npm run dev
+The application should now be accessible at http://localhost:5173.
+
+Configuration
+
+    The app relies on a backend API for fetching commit details and file diffs.
+    API Endpoints:
+        Commit details: ${VITE_BE_URL}/repositories/{owner}/{repo}/commits/{commit}/details
+        File diffs: ${VITE_BE_URL}/repositories/{owner}/{repo}/commits/{commit}/diff
+
+## Build and Deployment
+
+To create a production build:
+```
+npm run build
+```
+The output will be in the dist folder, which can be deployed to a static hosting service.
