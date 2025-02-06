@@ -9,7 +9,7 @@ const DiffViewer = () => {
     // Fetch commit details
     const fetchCommitDetails = async () => {
       const commitResponse = await fetch(
-        `http://localhost:8080/repositories/${owner}/${repo}/commits/${commit}/details`,
+        `${import.meta.env.VITE_BE_URL}/repositories/${owner}/${repo}/commits/${commit}/details`,
       );
       const commitData = await commitResponse.json();
       setCommitDetails(commitData);
@@ -18,7 +18,7 @@ const DiffViewer = () => {
     // Fetch file diffs
     const fetchFileDiffs = async () => {
       const diffResponse = await fetch(
-        `http://localhost:8080/repositories/${owner}/${repo}/commits/${commit}/diff`,
+        `${import.meta.env.VITE_BE_URL}/repositories/${owner}/${repo}/commits/${commit}/diff`,
       );
       const diffData = await diffResponse.json();
       setFileDiffs(diffData);
@@ -26,7 +26,7 @@ const DiffViewer = () => {
 
     fetchCommitDetails();
     fetchFileDiffs();
-  }, []);
+  }, [owner, repo, commit]);
 
   const handleFileSelect = (filePath) => {
     setExpandedFiles(
