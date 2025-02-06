@@ -1,5 +1,4 @@
 # Approach and Architectural Decisions
-<img src="/public/images/architecture.png" alt="Approach and Architectural Decisions">
 
 ## Technology Choices
 
