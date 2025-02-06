@@ -10,7 +10,7 @@ A React-based GitHub commit difference viewer built with Vite. This project allo
 - Highlights added (+) and removed (-) lines in the diff viewer.
 - Uses environment variables for API configuration.
 - Built with Vite for fast development and optimized builds.
-- swagger ui 
+- swagger UI
 
 ## Installation
 
