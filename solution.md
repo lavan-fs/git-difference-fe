@@ -1,4 +1,5 @@
 # Approach and Architectural Decisions
+<img src="https://github.com/lavan-fs/git-difference-fe/blob/main/public/images/overal.png?raw=true" alt="Overall  Approach and Architectural Decisions">
 
 ## Technology Choices
 
