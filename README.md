@@ -1,6 +1,6 @@
 # Description
 A React-based GitHub commit difference viewer built with Vite. This project allows users to view commit details, author information, and file changes in a structured and interactive format.
-# Overal Approach and Architectural
+# Overal Approach and Architecture
 <img src="/public/images/architecture.png" alt="Approach and Architectural Decisions">
 
 ## Requirements
