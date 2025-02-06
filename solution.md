@@ -6,7 +6,7 @@
 - **Java with Spring Boot**: Chosen for its robust ecosystem, ease of creating RESTful APIs, and scalability. Spring Boot also simplifies dependency management and configuration.
 - **Maven**: Used as the build tool to handle dependencies and automate the packaging process.
 - **GitHub API**: The backend interacts with GitHub repositories to fetch commit details and diffs.
-
+- **React JS**: React JS is used along with vite for faster build generation ,react provides virtual DOM manupulation which makes efficient.
 ## Architecture Overview
 
 The backend follows a RESTful service architecture, exposing endpoints to retrieve commit details and file differences.
